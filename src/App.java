@@ -1,16 +1,26 @@
 import java.util.Scanner;
-
+import java.util.*;
 
 public class App {
 
     static Scanner sc = new Scanner(System.in);
 
     static void IAFinfo(){
-        System.out.println("");
-        System.out.println("ABOUT IAF");
-        System.out.println("The International Accreditation Forum (IAF) is a worldwide association of accreditation bodies and other bodies interested in conformity assessment in the fields of management systems, products, processes, services, personnel, validation and verification and other similar programmes of conformity assessment.");
-        System.out.println("Our primary function is to develop a single worldwide program of conformity assessment which reduces risk for businesses and their customers by assuring them that accredited certificates and validation and verification statements may be relied upon.");
-        System.out.println("");
+        String info = "\nABOUT IAF\n" + "The International Accreditation Forum (IAF) is a worldwide association" + 
+        " of accreditation bodies and other bodies interested in conformity assessment in the fields of management" + 
+        " systems, products, processes, services, personnel, validation and verification and other similar programmes" + 
+        " of conformity assessment.\n" + "Our primary function is to develop a single worldwide program of conformity" + 
+        " assessment which reduces risk for businesses and their customers by assuring them that accredited" + 
+        " certificates and validation and verification statements may be relied upon.";
+        String[] strArray = null;
+        strArray = info.split(" ");
+        justification jus = new justification();
+        List<String> res = new ArrayList<String>();
+        res = jus.fullJustify(strArray, 75);
+        ListIterator<String> lItr = res.listIterator();
+        while (lItr.hasNext()) {
+            System.out.println(lItr.next());
+        }
     }
 
     static int ToDo(){
