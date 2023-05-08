@@ -57,7 +57,7 @@ public class App {
                 case 1:
                 User use = new User();
                     try {
-                        use.search1(true);
+                        use.search(true);
                     } catch (Exception e) {
                         e.getMessage();
                     }
